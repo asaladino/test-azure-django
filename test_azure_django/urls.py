@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from test_azure_django.subviews import HomeView
+
 urlpatterns = [
+    path('', HomeView.index, name='test_azure_django-home-index'),
     path('admin/', admin.site.urls),
 ]
